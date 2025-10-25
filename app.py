@@ -41,7 +41,7 @@ def submit():
         ])
 
     # Redirect ke YouTube (ganti link-nya dengan milikmu)
-    return redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    return redirect("https://youtube.com/@byamanrse?si=3XZMoPCVXsZCFWjQ")
 
 if __name__ == "__main__":
     app.run(debug=True)
