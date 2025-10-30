@@ -17,10 +17,12 @@ def submit():
     username = request.form["username"]
     nama_squad = request.form["nama_squad"]
     nomor_wa = request.form["nomor_wa"]
-    anggota1 = request.form["anggota1"]
-    anggota2 = request.form["anggota2"]
-    anggota3 = request.form["anggota3"]
-    anggota4 = request.form["anggota4"]
+
+    # Ambil data anggota secara opsional (tidak wajib diisi)
+    anggota1 = request.form.get("anggota1", "")
+    anggota2 = request.form.get("anggota2", "")
+    anggota3 = request.form.get("anggota3", "")
+    anggota4 = request.form.get("anggota4", "")
 
     # Cek apakah file CSV sudah ada
     file_exists = os.path.isfile(CSV_FILE)
